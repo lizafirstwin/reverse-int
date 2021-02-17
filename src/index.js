@@ -1,3 +1,10 @@
-module.exports = function reverse (n) {
-  
+module.exports = function reverse(n){
+	if(n < 0){
+    n *= -1;
+  }
+  while(n % 10 == 0){
+  	n /= 10;
+  }
+	n = +n.toString().split('').reverse().join('');
+  return n;
 }
